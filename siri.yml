@@ -1,0 +1,14 @@
+version : '3'
+services:
+  distro:
+     image: openjdk:17-jdk-alpine
+     restart: always
+     container_name: postgress
+  database:
+      image: alvistack/openjdk-17
+      restart: always
+      container_name: postgress-1
+      volumes:
+       - ./dump:/tmp/
+         
+     
